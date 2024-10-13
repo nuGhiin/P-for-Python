@@ -32,3 +32,15 @@ num =1
 while num<=10:
     print(num)
     num+=1
+
+#for-loop:
+numbers =[5, 10, 15, 20, 25]
+for num in numbers:
+    print(num)
+
+for i in range(1, 10, 2): #(start, stop, step)
+    print(i)
+
+sentence="You are my everything!"
+for char in sentence:
+    print(char)
