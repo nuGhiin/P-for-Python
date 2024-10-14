@@ -44,3 +44,19 @@ for i in range(1, 10, 2): #(start, stop, step)
 sentence="You are my everything!"
 for char in sentence:
     print(char)
+
+for i in range(5):
+    print(i) #output: 0 1 2 3 4
+
+
+#functions:
+def double_int(num):
+    sum=num*2
+    print(sum)
+double_int(8)
+
+def calc(n1, n2):
+    sum=n1**n2
+    return sum
+total =calc(2,2)
+print('TValue: ', total)
