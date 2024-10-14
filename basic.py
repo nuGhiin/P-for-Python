@@ -1,4 +1,7 @@
 #taking input:
+from sys import argv
+
+
 input("Give me money: ")
 money = input("Give me money: ")
 print("Here is your money: ", money)
@@ -49,7 +52,7 @@ for i in range(5):
     print(i) #output: 0 1 2 3 4
 
 
-#functions:
+###### F U N C T I O N #######
 def double_int(num):
     sum=num*2
     print(sum)
@@ -60,3 +63,19 @@ def calc(n1, n2):
     return sum
 total =calc(2,2)
 print('TValue: ', total)
+
+#args
+def allSum(*numbers): #will take as many parameters as needed
+    print(numbers)
+
+total=allSum(1, 2, 3 ,4)
+print('total: ', total)
+
+def all_Sum(n1, n2, *args): #formally called as args
+    sum=n1+n2
+    for i in args:
+        print(i)
+        #sum=sum+i
+    return sum
+t=all_Sum(10, 20, 30, 40, 50)
+print("Total: ", t)
