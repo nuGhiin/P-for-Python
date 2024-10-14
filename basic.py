@@ -79,3 +79,38 @@ def all_Sum(n1, n2, *args): #formally called as args
     return sum
 t=all_Sum(10, 20, 30, 40, 50)
 print("Total: ", t)
+
+
+def name(firstName, lastName):
+    name=f'full name is: {firstName} {lastName}' #fString
+    #name = firstName + ' ' + lastName
+    return name
+
+#HisName = name('Rakib', 'Khan') #taking parameeters in order
+
+HisName = name(lastName='islam', firstName='tonmoy') # in python order is not mandatory
+
+print(HisName)
+
+#kargs- [key argument]:
+def famousName(first, last, **addition):
+    name = f'{first} {last}'
+    #print(addition['title'])
+    for key, value in addition.items():
+        print(key, value)
+
+    return name
+
+name=famousName(first='Athar', last='Ali', title='sahebzada', title2='khan', last2='Talukder')
+print(name)
+
+#retun multiple things from an array
+def a_lot(n1, n2):
+    sum=n1+n2
+    mult=n1*n2
+    remain = n1-n2
+    return [sum, mult, remain]
+    #return sum, mult, remain
+
+res=a_lot(10,20)
+print(res)
