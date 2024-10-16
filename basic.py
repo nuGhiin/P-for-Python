@@ -132,3 +132,21 @@ def buyThing(item, price):
 buyThing('Laptop', 2000)
 print("After shopping: ", balance)
 
+
+"""L I S T"""
+
+#index =  0  1   2    3   4   5   6   7   8
+numbers= [45,50, 55, 32, 27, 87, 39, 77, 99]
+#index = -10  -9  -8  -7  -6  -5  -3  -2   -1
+
+print(numbers[3], numbers[-3])
+
+#list(start:end) start from the begining index and stops before the end index
+print(numbers[1: 4])
+#list(star: end: step)
+print(numbers[2:8:2])
+print(numbers[8:2:-2])
+print(numbers[:4]) #0 theke shuru hoye 4 er aag porjonto cholbe
+print(numbers[3:]) # 3 theke shuru hoye shesh index er aag porjonto cholbe
+print(numbers[:])  # shortcut to copy / shuru theke shesh index er purbo porjonto
+print(numbers[: : -1]) #shortcut to reverse
