@@ -114,3 +114,21 @@ def a_lot(n1, n2):
 
 res=a_lot(10,20)
 print(res)
+
+##global and local scope:
+
+balance = 3000 #global var
+
+def buyThing(item, price):
+    #local scope var
+    #can access global var without using the global var
+    dreamPhone ='Iphone'
+    # to modify , have to use the global keyword
+    global balance
+    print(f' privious balance value ', balance)
+    balance =balance -price
+    print(f'balance after buying {item}', balance)
+
+buyThing('Laptop', 2000)
+print("After shopping: ", balance)
+
