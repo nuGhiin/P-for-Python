@@ -150,3 +150,21 @@ print(numbers[:4]) #0 theke shuru hoye 4 er aag porjonto cholbe
 print(numbers[3:]) # 3 theke shuru hoye shesh index er aag porjonto cholbe
 print(numbers[:])  # shortcut to copy / shuru theke shesh index er purbo porjonto
 print(numbers[: : -1]) #shortcut to reverse
+
+
+###LIST Comprehension###
+
+numbers = [11, 23, 44, 56, 77, 98, 99, 29]
+odds=[]
+for num in numbers:
+    if num%2 == 1:
+        odds.append(num)
+print(odds)
+
+oddsNumbers = [num for num in numbers if num%2 == 1]
+print(oddsNumbers)
+
+numbers =[7,8,5,4,3,2,4]
+print(numbers[::-1])
+
+
