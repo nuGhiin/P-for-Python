@@ -11,7 +11,6 @@ for i in range(n):
 
 #to take a list as an input in a single line
 arr = list(map(int,input().split()))
-
 maax = max(arr)
 miin = min(arr)
 
