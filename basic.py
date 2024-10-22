@@ -178,5 +178,9 @@ numver one
 print(name)
 
 #string is a sequence of characters
+for char in name2:
+    print(char)
 #mutable means changeable
+#immuatable means you can't change it
+name2[0]='R' #not allowed / string immutable
 
