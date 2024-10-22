@@ -210,3 +210,25 @@ mega =([2, 3, 4], [4, 5, 6]) #2 list inside a tuple
 print(mega[0])
 mega[0][2]=444 #changing list's value inside of the tuple
 print(mega)
+
+###         SET         ###
+numbers=[1,2, 3, 4, 5, 6, ]
+print(numbers)
+n_set=set(numbers)
+print(n_set)
+
+#list--> []
+#tuple--> ()
+#set--> {}
+n_set.add(55)
+print(n_set)
+
+a={2, 3, 4}
+b={5, 6, 7, 4}
+print(a&b) #intersection set
+
+print(a|b) #union set
+"""
+--> SET is full of unique items. No place for duplicates
+--> Mutable but doesn't support indexing
+"""
