@@ -167,4 +167,16 @@ print(oddsNumbers)
 numbers =[7,8,5,4,3,2,4]
 print(numbers[::-1])
 
+###         String        ###
+
+name='sakib\'s khan'#escape
+name2="sakib khan"
+name3= """
+sakib khan
+numver one
+"""
+print(name)
+
+#string is a sequence of characters
+#mutable means changeable
 
