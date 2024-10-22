@@ -184,3 +184,29 @@ for char in name2:
 #immuatable means you can't change it
 name2[0]='R' #not allowed / string immutable
 
+
+
+###         tuples          ###
+"""Python tuples are a type of data structure that is very similar to lists. 
+The main difference between the two is that tuples are immutable, 
+meaning they cannot be changed once they are created.
+ This makes them ideal for storing data 
+ that should not be modified, such as database records."""
+
+def multiple():
+    return 3, 4
+print(multiple())
+things='pen', 'tripod', 'water bottle'
+print(things)
+print(type(things))
+
+if 'phone' in things:
+    print('exists')
+
+for item in things:
+    print(item)
+
+mega =([2, 3, 4], [4, 5, 6]) #2 list inside a tuple
+print(mega[0])
+mega[0][2]=444 #changing list's value inside of the tuple
+print(mega)
