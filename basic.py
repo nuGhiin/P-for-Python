@@ -261,3 +261,19 @@ for item in person:
     print(item) # only keys will be in output
 for item in person.items():
     print(item) # to get the values
+
+
+###         Built in Modules            ###
+from math import *
+from random import *
+from time import sleep
+
+res = ceil(4.456)
+res = floor(4.456)
+print(res)
+
+print(randint(1,100))
+sleep(4)
+
+print('storng')
+print(choice(['sakib', 'mash', 'mush']))
