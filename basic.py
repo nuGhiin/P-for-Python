@@ -306,5 +306,17 @@ except:
     print('error!')
 finally:
     print("finally here!")
-    
+
 print("OKay! Let's try something else.")
+
+###             Python flie read and write          ###
+
+#.csv : comma separated value
+#.txt : text file
+
+with open('message.txt', 'w') as file:
+    file.write('I Love you Moharani!')
+with open('message.txt', 'a') as file:
+    file.write('I Love you Moharani!')
+with open('message.txt', 'r') as file:
+    file.write('I Love you Moharani!')
