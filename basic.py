@@ -297,3 +297,14 @@ while True:
     _, frame = cam.read()
     cv2.imshow('my cam',frame)
     cv2.waitKey(1)
+
+###         Exception Handling          ###
+
+try:
+    res=47/0
+except:
+    print('error!')
+finally:
+    print("finally here!")
+    
+print("OKay! Let's try something else.")
