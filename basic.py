@@ -232,3 +232,28 @@ print(a|b) #union set
 --> SET is full of unique items. No place for duplicates
 --> Mutable but doesn't support indexing
 """
+
+###         DICTIONARY          ###
+person1=['Kala Miah', 'Kalipur', 34, 'Bekar']
+# key value pair
+#dictionary
+#object
+#hash table
+#overlap with set
+#{key: value}
+"""A Python dictionary is a DS & collection of 
+key:value pairs"""
+
+person={'name': 'Roshik Kalia', 'address': 'Kalipur', 'age': 24}
+print(person)
+print(person['age'])
+print(person.keys())
+print(person.values())
+person['name'] = 'Sada Pakhi' # value mutable
+print(person)
+
+#dictionary looping:
+for item in person:
+    print(item) # only keys will be in output
+for item in person.items():
+    print(item) # to get the values
