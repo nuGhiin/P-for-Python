@@ -320,3 +320,36 @@ with open('message.txt', 'a') as file:
     file.write('I Love you Moharani!')
 with open('message.txt', 'r') as file:
     file.write('I Love you Moharani!')
+
+
+###         Lambda Function         ###
+
+# def doubled(x):
+#     return x*2
+
+doubled = lambda num: num*2 # lambda function
+res=doubled(44)
+print(res)
+
+add = lambda x, y: x+y
+sum= add(1,3)
+print(sum)
+
+numbers = [11, 23, 44, 56, 77, 98, 99, 29]
+doubled_nums= map(doubled, numbers)
+sq_numbers= map(lambda x: x*x, numbers)
+print(list(doubled_nums))
+print(list(sq_numbers))
+
+
+actress= [
+    {'name': 'Natalie', 'age': 47},
+    {'name': 'Kate', 'age': 52},
+    {'name': 'Ronan', 'age': 32},
+    {'name': 'Saliha', 'age': 28}
+]
+jr = filter(lambda artist: artist['age'] < 35, actress)
+print(list(jr))
+
+fivers= filter(lambda art: art['age'] %5==0, actress)
+print(list(fivers))
