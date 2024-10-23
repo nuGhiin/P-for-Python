@@ -156,6 +156,12 @@ numbers=[12, 34, 55, 63, 32324]
 for i, num in enumerate(numbers):
     print(i, num)
 
+
+###list sliceing and assignment
+numbers = [9, 15, 2, 36]
+numbers[1:4] = [20, 14, 36]
+print(numbers)
+
 ###LIST Comprehension###
 
 numbers = [11, 23, 44, 56, 77, 98, 99, 29]
@@ -353,3 +359,5 @@ print(list(jr))
 
 fivers= filter(lambda art: art['age'] %5==0, actress)
 print(list(fivers))
+
+
