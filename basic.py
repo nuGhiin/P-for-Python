@@ -277,3 +277,16 @@ sleep(4)
 
 print('storng')
 print(choice(['sakib', 'mash', 'mush']))
+
+
+###          External packages: PyAutoGUI            ###
+
+import pyautogui
+from time import sleep
+
+sleep(5)
+for i in range(0, 3):
+    pyautogui.write('Hellow Tonmoy', interval=0.25)
+    pyautogui.press('enter')
+
+
