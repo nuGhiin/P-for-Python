@@ -151,6 +151,10 @@ print(numbers[3:]) # 3 theke shuru hoye shesh index er aag porjonto cholbe
 print(numbers[:])  # shortcut to copy / shuru theke shesh index er purbo porjonto
 print(numbers[: : -1]) #shortcut to reverse
 
+#to get list's indexes:
+numbers=[12, 34, 55, 63, 32324]
+for i, num in enumerate(numbers):
+    print(i, num)
 
 ###LIST Comprehension###
 
