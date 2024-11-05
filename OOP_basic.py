@@ -113,3 +113,84 @@ tonmoy.addToCart('bread', 25, 5)
 print(tonmoy.cart)
 
 tonmoy.checkout(1469)
+
+
+
+
+
+###         Create a school using multiple classes          ###
+
+class Student:
+    def __init__(self, name, id, cclass):
+        self.name = name
+        self.id = id
+        self.cclass = cclass
+    
+    def __repr__(self) -> str: ## to display the class in readable way
+        return f'Student infos: name: {self.name}, class: {self.cclass}, id: {self.id}'
+
+class Teacher:
+    def __init__(self, name, subject, id):
+        self.name = name
+        self.subject = subject
+        self.id = id
+    
+    def __repr__(self) -> str:
+        return f'Teacher infos: name:{self.name}, subject: {self.subject}, id: {self.id}'
+
+class School:
+    def __init__(self, name):
+        self.name = name
+        self.teachers = []
+        self.students = []
+    
+    def addTeachers(self, name, subject):
+        id = len(self.teachers) + 101
+        teacher = Teacher(name, subject, id)
+        self.teachers.append(teacher)
+    
+    def enroll(self, name, fee):
+        if fee < 6500:
+            return 'not enough fees'
+        else:
+            id = len(self.students) + 1
+            student = Student(name, id, 'C')
+            self.students.append(student)
+            return f'{name} is enrolled with id: {id}, extra money {fee - 6500}'
+
+    def __repr__(self) -> str:
+        print('Welcome to ', self.name)
+        print('------Our Teachers------')
+        for teacher in self.teachers:
+            print(teacher)
+        print('------OUr Students-------')
+        for student in self.students:
+            print(student)
+        return 'All Done'
+
+
+
+
+darunSchool = School('Darun School')
+darunSchool.enroll('tanjid', 8799)
+darunSchool.enroll('tanmid', 8739)
+darunSchool.enroll('tandid', 7399)
+darunSchool.enroll('tansis', 6599)
+
+darunSchool.addTeachers('Prof Rohama', 'Quantam Physics')
+darunSchool.addTeachers('Prof Tonmoy', 'Algorithm Advance')
+darunSchool.addTeachers('Prof Mehzabin', 'DBMS')
+
+
+print(darunSchool)
+
+
+tonmoy = Teacher('T Tonmoy', 'Chemistry', 20147)
+print(tonmoy)
+alia = Student('Aila Bhaat', 93838, 9)
+print(alia)
+
+
+
+
+
