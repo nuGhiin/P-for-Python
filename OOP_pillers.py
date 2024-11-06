@@ -43,16 +43,22 @@ class DerivedClass(BaseClass):
     pass
 
 """
-1. simple inheritance: parent class --> child class
+1. Simple inheritance: parent class --> child class
 (Gadget --> Phone) 
 (Gadget --> Laptop)
 
-2. multi-level inheritance: Grand --> parent --> child
+2. Multi-level inheritance: Grand --> parent --> child
 (vehicle --> bus --> ac bus)
+
+3. Multiple inheritance: 
+
+4. Hybrid inheritance: 
 
 """
 
 
+
+#simple inheritance
 class Gadget:
     def __init__(self, brand, price, color) -> None:
         self.brand = brand
@@ -91,6 +97,7 @@ myPhone = Phone(True, 'Samsung', 105000, 'red')
 print(myPhone)
 
 
+#multilevel inheritance
 class Vehicle:
     def __init__(self, name, price) -> None:
         self.name = name
@@ -103,7 +110,7 @@ class Vehicle:
         return f'{self.name} {self.price}'
     
 
-    
+  
 class Bus(Vehicle):
     def __init__(self, name, price, seat) -> None:
         self.seat = seat
@@ -133,3 +140,25 @@ class ACBuss(Bus):
 
 green_line = ACBuss('GreenLine', 2500, 40, 36)
 print(green_line)
+
+
+#multiple inheritance:
+
+class Family:
+    def __init__(self, address) -> None:
+        self.address = address
+
+class School:
+    def __init__(self, id, level) -> None:
+        self.id = id
+        self.level = level
+
+class Sports:
+    def __init__(self, game) -> None:
+        self.game = game
+
+class Student(Family, School, Sports):
+    def __init__(self, address, id, level, game) -> None:
+        School.__init__(self, id, level)
+        Sports.__init__(self, game)
+        super().__init__(address)
