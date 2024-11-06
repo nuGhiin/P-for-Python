@@ -30,8 +30,11 @@ class Phone:
 
 
 ############################################################################
-"""                         Inheritence                                  """
+"""                         Inheritannce                                  """
 ############################################################################
+
+
+
 
 #base class/parent class, common attribute + functionality class
 #derived class/child class, uncommon attribute + functionality class
@@ -162,3 +165,34 @@ class Student(Family, School, Sports):
         School.__init__(self, id, level)
         Sports.__init__(self, game)
         super().__init__(address)
+
+
+
+
+
+
+############################################################################
+"""                         Encapsulation                                """
+############################################################################
+
+class Bank:
+    def __init__(self, holderName, initDeposit) -> None:
+        self.holderName = holderName # public
+        self.__balance = initDeposit ## access modifier(private)
+        self._branch = 'banani 11' #protected
+
+    def deposit(self, amount):
+        self.__balance +=amount
+
+    def get_balance(self):
+        return self.__balance
+
+tom = Bank('tanj', 12500)
+
+tom.holderName = 'minaj'
+print(tom.holderName)
+print(tom.get_balance())
+
+print(tom._Bank__balance)
+        
+
