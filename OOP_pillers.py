@@ -194,5 +194,30 @@ print(tom.holderName)
 print(tom.get_balance())
 
 print(tom._Bank__balance)
-        
 
+
+
+############################################################################
+"""                         Abstraction                                 """
+############################################################################
+
+from abc import ABC, abstractmethod     
+#abstraction base class = abc
+
+class Animal(ABC):
+    @abstractmethod  #enforcing all derived / child class to have eat method
+    def eat(self):
+        print('I ned fod')
+    def move(self):
+        pass
+
+class Monkey(Animal):
+    def __init__(self, name) -> None:
+        self.category = 'Monkey'
+        self.name = name
+        super().__init__()
+    def eat(self):
+        print('I need food')
+
+layka = Monkey('lucky')
+layka.eat()
