@@ -30,9 +30,12 @@ class Phone:
 
 
 ############################################################################
-"""                         Inheritannce                                  """
+"""                         Inheritance                                  """
 ############################################################################
-
+"""
+Inheritance enables reusability , allowing new classes to build upon existing
+ones.
+"""
 
 
 
@@ -174,7 +177,10 @@ class Student(Family, School, Sports):
 ############################################################################
 """                         Encapsulation                                """
 ############################################################################
-
+"""
+Encapsulation keeps data safe and ensures control over 
+modifications.
+"""
 class Bank:
     def __init__(self, holderName, initDeposit) -> None:
         self.holderName = holderName # public
@@ -200,16 +206,22 @@ print(tom._Bank__balance)
 ############################################################################
 """                         Abstraction                                 """
 ############################################################################
+"""
+Abstraction: It is the concept of hiding unnecessary details from the user and only showing essential infos.
+In python, abstract classes and abstract methods help implement
+abstraction. 
+- Abstract classes serve as blueprints for other classes, 
+ensuring that certain methods are present in subclass without implementing them directly in
+abstract class
 
+"""
 from abc import ABC, abstractmethod     
 #abstraction base class = abc
 
 class Animal(ABC):
     @abstractmethod  #enforcing all derived / child class to have eat method
     def eat(self):
-        print('I ned fod')
-    def move(self):
-        pass
+        pass #No implementation here, subclasses must define it
 
 class Monkey(Animal):
     def __init__(self, name) -> None:
@@ -226,7 +238,11 @@ layka.eat()
 ############################################################################
 """                         Polymorphism                                 """
 ############################################################################
-
+"""
+Polymorphism: It means --> many forms.
+- It allows objects to be treated as instances of their parent class
+rather than their actuall class.
+"""
 # poly --> many(multiple)
 # morph --> tyep
 
@@ -274,3 +290,21 @@ for animal in animals:
 
 print(issubclass(Kutta, Animal))
 print(isinstance(mishti, Cat))
+
+
+class Bird:
+    def sound(self):
+        return "Chirp"
+
+class Dog:
+    def sound(self):
+        return "Bark"
+
+def make_sound(animal):
+    print(animal.sound())
+
+bird = Bird()
+dog = Dog()
+
+make_sound(bird) # Output: Chirp
+make_sound(dog)  # Output: Bark
