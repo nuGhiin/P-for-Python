@@ -221,3 +221,56 @@ class Monkey(Animal):
 
 layka = Monkey('lucky')
 layka.eat()
+
+
+############################################################################
+"""                         Polymorphism                                 """
+############################################################################
+
+# poly --> many(multiple)
+# morph --> tyep
+
+class Animal:
+    def __init__(self, name) -> None:
+        self.name = name
+    def makeSound(self):
+        print('animal making their sound')
+
+class Cat(Animal):
+    def __init__(self, name) -> None:
+        super().__init__(name)
+    
+    def makeSound(self):
+        print('meow meow')
+
+mishti = Cat('Mishti')
+mishti.makeSound()
+
+
+class Kutta(Animal):
+    def __init__(self, name) -> None:
+        super().__init__(name)
+    
+    def makeSound(self):
+        print('ghew ghew')
+
+lalu = Kutta('Laalu')
+lalu.makeSound()
+
+class Goru(Animal):
+    def __init__(self, name) -> None:
+        super().__init__(name)
+    
+    def makeSound(self):
+        print('hemba hemba')
+
+mishu = Goru('mishu miah')
+mishu.makeSound()
+
+animals = [mishti, lalu, mishu]
+for animal in animals:
+    animal.makeSound()
+
+
+print(issubclass(Kutta, Animal))
+print(isinstance(mishti, Cat))
