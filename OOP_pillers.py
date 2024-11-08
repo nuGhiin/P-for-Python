@@ -308,3 +308,57 @@ dog = Dog()
 
 make_sound(bird) # Output: Chirp
 make_sound(dog)  # Output: Bark
+
+
+
+##########################
+"""     Overriding    """
+##########################
+"""
+It happens when a child(subclass) provides its own version of a method that
+is already defined in its parent(superclass). The child class "overrides"
+the method of the parent class. It allows to define specialized behavior
+in the child class.
+- The method in the child class has the same name and same parameters as the method in the
+parent classs.
+- when , call the overridden method on an object of the child class,
+python uses the version of the method defined in the child class.
+"""
+
+class Person:
+    def __init__(self, name, age, height, weight) -> None:
+        self.name = name
+        self.age = age
+        self.height = height 
+        self.weight = weight
+    
+    def eat(self):
+        print("he is eating")
+    
+    def exercise(self):
+        raise NotImplementedError
+
+class Circketer(Person):
+    def __init__(self, name, age, height, weight, team) -> None:
+        self.team = team
+        super().__init__(name, age, height, weight)
+
+    #override
+    def eat(self):
+        print('Under diet')
+
+        
+    #overloading + operator
+    def __add__(self, other):
+        return self.age + other.age
+
+
+
+
+mushfiq = Circketer('Mushfiq', 35, 162, 60, 'BD')
+ashfaq = Circketer('Ashfaq', 27, 172, 64, 'DD')
+mushfiq.eat()
+#mushfiq.exercise()
+
+#overloading + operator
+print(mushfiq + ashfaq)
