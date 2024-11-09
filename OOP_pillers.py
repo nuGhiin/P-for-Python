@@ -371,8 +371,11 @@ print(mushfiq + ashfaq)
 class Shopping:
     cart = [] #class attribute / #static attribute
 
-    def __init__(self, name) -> None:
+    def __init__(self, name, age, birthyear) -> None:
         self.name = name
+        self._age = age
+        self.__birthyear = birthyear
+
 
     def purchase(self, item, price, amount):
         remaining = amount - price
@@ -398,13 +401,40 @@ cls represents the class, a class method can:
     @staticmethod
     def addd(a, b): # Static method that doesn't need access to the class or instance
         print('res: ', a+b)
+    
+
+    #getter : read only : getter without any setter is read only attribute
+    """get a value of property through a method.
+    most of time , to get the value of private attribute"""
+    @property
+    def birthYear(self):
+        return self.__birthyear
+
+    #setter
+    """set a value of property through a method.
+    most of time , to set the value of private attribute"""
+    @birthYear.setter
+    def birthYear(self, val):
+        if val< 0:
+            return 'cannot be neg'
+        self.__birthyear += val
 
 
-mb = Shopping('MB')
-mb.purchase('tshirt', 435, 2) # Using instance method with an instance
 
-Shopping.purchase('mb', 'lug', 33, 1)
-#Shopping.check('2', True)
-Shopping.check(True) # Using class method with the class itself
 
-Shopping.addd(5,6)
+
+# mb = Shopping('MB')
+# mb.purchase('tshirt', 435, 2) # Using instance method with an instance
+
+# #Shopping.purchase('mb', 'lug', 33, 1)
+# #Shopping.check('2', True)
+# Shopping.check(True) # Using class method with the class itself
+
+# Shopping.addd(5,6)
+
+samsu = Shopping('sma', 22, 2000)
+#print(samsu.__birthyear)
+
+print(samsu.birthYear)
+samsu.birthYear = 1
+print(samsu.birthYear)
