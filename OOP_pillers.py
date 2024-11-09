@@ -438,3 +438,27 @@ samsu = Shopping('sma', 22, 2000)
 print(samsu.birthYear)
 samsu.birthYear = 1
 print(samsu.birthYear)
+
+
+###         inner function and wrapper function         ###
+
+#function is a first class object
+
+def double():
+    print('inside double')
+    def tripple():
+        print('inside tripple')
+        return 'inside triple'
+    return tripple
+
+print(double()())
+
+def routine(work):
+    print('started')
+    work()
+    print('ended')
+
+def coding():
+    print('learning python')
+
+routine(coding)
