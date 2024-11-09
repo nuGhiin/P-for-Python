@@ -312,8 +312,11 @@ make_sound(dog)  # Output: Bark
 
 
 ##########################
-"""     Overriding    """
+"""     OOP More    """
 ##########################
+
+
+# Overriding: 
 """
 It happens when a child(subclass) provides its own version of a method that
 is already defined in its parent(superclass). The child class "overrides"
@@ -362,3 +365,46 @@ mushfiq.eat()
 
 #overloading + operator
 print(mushfiq + ashfaq)
+
+
+
+class Shopping:
+    cart = [] #class attribute / #static attribute
+
+    def __init__(self, name) -> None:
+        self.name = name
+
+    def purchase(self, item, price, amount):
+        remaining = amount - price
+        print(f'roilo baki: {remaining}')
+    
+    @classmethod
+    def check(cls, ok):
+        print('is it okay?')
+
+    """
+cls vs self: In instance methods (which lack @classmethod), 
+self receives the instance of the class. 
+But in a class method, cls receives the class itself, 
+allowing it to interact with class-level data.
+
+cls represents the class, a class method can:
+
+--> Access and modify class attributes shared among all instances.
+--> Call other class methods or create new instances of the class itself.
+
+"""
+    
+    @staticmethod
+    def addd(a, b): # Static method that doesn't need access to the class or instance
+        print('res: ', a+b)
+
+
+mb = Shopping('MB')
+mb.purchase('tshirt', 435, 2) # Using instance method with an instance
+
+Shopping.purchase('mb', 'lug', 33, 1)
+#Shopping.check('2', True)
+Shopping.check(True) # Using class method with the class itself
+
+Shopping.addd(5,6)
