@@ -462,3 +462,24 @@ def coding():
     print('learning python')
 
 routine(coding)
+
+
+
+### how does a decorator work:
+import math
+def timer(func):
+    def inner(*args, **kargs):
+        print('time started')
+        #print(func)
+        func(*args, **kargs)
+        print('time ended')
+    return inner
+
+@timer
+def get_fact(n):
+    print('fact gotcha!')
+    res = math.factorial(n)
+    print(f'factorial of {n} is: {res}')
+
+
+get_fact(5)
