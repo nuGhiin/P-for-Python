@@ -483,3 +483,36 @@ def get_fact(n):
 
 
 get_fact(5)
+
+
+####################################################
+""" Class Composition. inheritance vs composition """
+####################################################
+
+"""
+n composition, one class is made up of 
+other classes—it "has" other objects inside it. 
+Instead of copying behaviors from a parent class, 
+it just uses other classes to get the job done.
+"""
+class CPU:
+    def __init__(self,cores) -> None:
+        self.cores = cores
+
+class RAM:
+    def __init__(self, size) -> None:
+        self.size = size
+
+class HardDrive:
+    def __init__(self, capacity) -> None:
+        self.capacity = capacity
+
+class Computer:
+    def __init__(self, cores, ramSize, hdCapacity) -> None:
+        self.cpu = CPU(cores)
+        self.ram = RAM(ramSize)
+        self.hardDisc = HardDrive(hdCapacity)
+
+
+acer = Computer(8, 12, 512)
+print(acer)
