@@ -32,6 +32,25 @@ class Hall(Star_Cinema):
             seatArrangement.append(row)
         
         self.seats[id] = seatArrangement
+#"""answer to the question no: 4"""
+    def book_seats(self, id, seatPos):
+        if id not in self.seats:
+            print(f"Error: show ID '{id}' does not exist")
+            return
+        seatArrangement = self.seats[id]
+
+        for row, col in seatPos:
+            if row<0 or row>=self.rows or col<0 or col>=self.cols:
+                print(f"Invalid seat position: ({row}, {col})")
+                continue
+
+            if seatArrangement[row][col] == 'B':
+                print(f"Seat ({row}, {col}) is already booked")
+            
+            seatArrangement[row][col] = 'B'
+
+        self.seats[id]=seatArrangement
+
 
 
 
