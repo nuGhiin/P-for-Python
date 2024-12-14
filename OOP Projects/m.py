@@ -63,6 +63,10 @@ class Hall(Star_Cinema):
         
 
 #"""answer to the question no: 5"""
+    def view_show_list(self):
+        for show in self.show_list:
+            print(f"ID: {show[0]}, Movie:{show[1]}, Time: {show[2]}")
+
 
 
 
