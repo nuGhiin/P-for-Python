@@ -4,8 +4,14 @@ class Star_Cinema:
     def __init__(self) -> None:
         pass
     
-    def entry_hall(self, hall):
-        self.hall_list.append(hall)
+    @classmethod
+    def entry_hall(cls, hall):
+        cls.hall_list.append(hall)
+
+    # def entry_hall(self, hall):
+    #     self.hall_list.append(hall)
+
+
 
 #""" answer to the question no: 2 """ 
 class Hall(Star_Cinema):
@@ -16,7 +22,9 @@ class Hall(Star_Cinema):
         self.seats = {}
         self.show_list = []
 
-        Star_Cinema.entry_hall(self, self)
+        Star_Cinema.entry_hall(self)
+
+        #Star_Cinema.entry_hall(self, self)
 
         
 #"""answer to the question no: 3"""
@@ -32,6 +40,8 @@ class Hall(Star_Cinema):
             seatArrangement.append(row)
         
         self.seats[id] = seatArrangement
+
+
 #"""answer to the question no: 4"""
     def book_seats(self, id, seatPos):
         if id not in self.seats:
@@ -50,8 +60,9 @@ class Hall(Star_Cinema):
             seatArrangement[row][col] = 'B'
 
         self.seats[id]=seatArrangement
+        
 
-
+#"""answer to the question no: 5"""
 
 
 
