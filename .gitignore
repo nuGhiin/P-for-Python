@@ -1,3 +1,4 @@
 .cph
 tempCodeRunnerFile.py
-OOP Projects\School Management\__pycache__
+*.pyc
+
