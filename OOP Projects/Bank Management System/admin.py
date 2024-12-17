@@ -18,6 +18,7 @@ class Admin:
                 break
         if user:
             User.userAccounts.remove(user)
+            print(f"{user.name}'s Account Deleted!")
         else:
             print("Account Not Found!")
     
