@@ -60,7 +60,7 @@ class User:
             if user.accountNumber == recipientAccountNumber:
                 recipient = user
                 break
-            
+
         if recipient is None:
             print("Account does not exist!")
         elif amount>self.balance:
@@ -71,7 +71,7 @@ class User:
             self.balance -= amount
             recipient.balance +=amount
             self.transactionHistory.append(f"Money Transferred: {amount} to {recipientAccountNumber}")
-            recipient.transactionHitory.append(f"Money Received: {amount} from {self.accountNumber}")
+            recipient.transactionHistory.append(f"Money Received: {amount} from {self.accountNumber}")
             print(f"Transfer successful. Your new balance: {self.balance}")
 
 
