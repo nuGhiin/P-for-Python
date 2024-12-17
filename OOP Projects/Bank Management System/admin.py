@@ -13,9 +13,9 @@ class Admin:
     def delAccount(accountNumber):
         user = None
         for i in User.userAccounts:
-            if i.accountNumber == accountNumber
-            user = i
-            break
+            if i.accountNumber == accountNumber:
+                user = i
+                break
         if user:
             User.userAccounts.remove(user)
         else:
